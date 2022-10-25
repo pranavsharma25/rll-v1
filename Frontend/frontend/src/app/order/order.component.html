@@ -37,7 +37,7 @@
   <div class="row justify-content-md-center" style="margin : 10px">
     <div class="col col-md-5 col-sm-12" style="display:block; margin:20px" *ngFor="let f of searchedFood">
       <span class="card" style="width: auto">
-        <img class="card-img-top" [src]="f.img" alt="Card image" style="width : auto">
+       
         <span class="card-body">
           <h4 class="card-title">{{f.dishName | titlecase}}</h4>
           <p class="card-text">{{f.description | titlecase}}</p>
@@ -51,7 +51,7 @@
 <div *ngIf="searchEmpty">
   <div id="main">
     <div class="fof">
-      <h1>Sorry : Can't Find What You Are Looking For !!!  </h1>
+      <h1>Sorry...Item not found :( </h1>
 
       <h2>We have other great dishes available...</h2>
       <button class='btn btn-success'

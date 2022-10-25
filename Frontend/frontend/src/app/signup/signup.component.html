@@ -1,12 +1,12 @@
-<div class=" row justify-content-md-center" style=" padding : 15px; background-image:url(../../assets/images/SBG.jpg);">
+<div class=" row justify-content-md-center" style=" padding : 15px;">
   <div id="main" class="card text-center col-md-6 col-sm-12" style="padding: 0; margin:15px">
-    <div class="card-header" style="color:white; background-color : green ">
+    <div class="card-header" style="color:white; background-color : #343a40 ">
       <b>Sign Up</b>
     </div>
     <div class="card-body">
       <form #signupForm="ngForm" class="container-fluid">
         <div class="alert alert-danger col-12" role="alert" *ngIf="userTaken">
-          UserId Registered : Choose another ID
+          UserId already registered : Choose another ID
         </div>
         <div class="col-12">
           <label for="userId" class="form-label" style="float:left">User Id</label>
@@ -41,7 +41,7 @@
           <div class="alert-danger col-12"
                *ngIf="contactNumber.errors && (contactNumber.invalid && contactNumber.touched)" role="alert" style="margin:2px; padding:5px">
             <span *ngIf="contactNumber.errors.required">Contact Number is required</span>
-            <span *ngIf="contactNumber.errors.pattern">Should contain 10 digit and first char should be between 6-9</span>
+            <span *ngIf="contactNumber.errors.pattern">Should contain 10 digits</span>
           </div>
         </div>
         <div class="col-12">
@@ -53,7 +53,7 @@
           <div class=" alert-danger col-12"
                *ngIf="password.errors && (password.invalid && password.touched)" role="alert" style="margin:2px; padding:5px">
             <span *ngIf="password.errors.required">Enter Password</span>
-            <span *ngIf="password.errors.minlength">Atleast 8 character long</span>
+            <span *ngIf="password.errors.minlength">Atleast 8 characters</span>
           </div>
         </div>
         <div class="col-12">

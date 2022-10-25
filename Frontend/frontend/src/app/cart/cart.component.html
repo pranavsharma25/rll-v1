@@ -21,8 +21,8 @@
             <td>{{c.quantity}}</td>
             <td>{{c.price}}</td>
             <td>
-              <button class="btn btn-success" style="border-radius:0" type="button" (click)="fnAdd(c.cartId)">Add Item</button>
-              <button type="button" class="btn btn-warning" style="border-radius:0" (click)="fnRemove(c.cartId)">Remove Item</button>
+              <button class="btn btn-success" style="border-radius:0" type="button" (click)="fnAdd(c.cartId)">+</button>
+              <button type="button" class="btn btn-warning" style="border-radius:0" (click)="fnRemove(c.cartId)">-</button>
             </td>
             <!--<td><input type="button" value="Remove" (click)="fnRemove(c.id)"></td>-->
           </tr>
@@ -43,7 +43,7 @@
         <div class="fof">
           <h1>Your Cart Is Empty  </h1>
           
-          <h2>Hurry UP!!! Order Something</h2>
+          <h2>Start ordering now...</h2>
           <button class='btn btn-success'
                   style='width:auto'
                   [routerLink]="['/order']">Go To Menu</button>
